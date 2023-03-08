@@ -40,7 +40,7 @@ a {
   transition: all 0.4s ease;
 }
 a:hover {
-  color: #ffc200 !important;
+  color: #ed6e19 !important;
 }
 
 .navbar-brand .uil {
@@ -398,7 +398,7 @@ b, strong {
   font-size: inherit;
 }
 .owl-theme .owl-nav [class*=owl-]:hover {
-  color: #ffc200;
+  color: #d06f15;
 }
 .owl-theme .owl-dots .owl-dot {
   outline: none;
@@ -430,10 +430,10 @@ b, strong {
   height: 48px;
 }
 .contact-form .form-control:hover, .contact-form .form-control:focus {
-  border-color: #ffc200;
+  border-color: #d06f15;
 }
 .contact-form .submit-btn {
-  background: #ffc200;
+  background: #d06f15;
   border-radius: 50px;
   color: #ffffff;
   font-weight: bold;
@@ -462,7 +462,7 @@ b, strong {
   margin: 5px 0;
 }
 .social-links .uil:hover {
-  color: #ffc200;
+  color: #d06f15;
 }
 
 @media (min-width: 1270px) {
@@ -566,5 +566,77 @@ b, strong {
   .social-links li {
     display: inline-block;
     vertical-align: top;
+  }
+}
+
+
+
+/*/ portfolio wrapper */
+.portfolio-card {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-style: solid;
+  border-color: gray;
+  border-radius: 5px;
+}
+
+.portfolio-card .portfolio-card-img {
+  width: 100%;
+  height: 200px;
+}
+
+.portfolio-card .portfolio-card-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  background-image: -webkit-linear-gradient(bottom, #e1dfed 0%, rgba(225, 223, 237, 0.7) 99%, rgba(225, 223, 237, 0.8) 100%);
+  background-image: linear-gradient(to top, #e1dfed 0%, rgba(225, 223, 237, 0.7) 99%, rgba(225, 223, 237, 0.8) 100%);
+  -webkit-transition: all, 0.3s;
+  transition: all, 0.3s;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-card .portfolio-card-overlay {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+.portfolio-card .portfolio-card-overlay .portfolio-card-caption {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.portfolio-card:hover .portfolio-card-overlay {
+  opacity: 1;
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+}
+
+@media (max-width: 767.98px) {
+  .portfolio-card {
+    margin-bottom: 30px;
+  }
+  .service-card {
+    margin-bottom: 30px;
   }
 }
